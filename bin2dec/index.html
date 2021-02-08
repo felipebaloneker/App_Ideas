@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Binario para Decimal</title>
+</head>
+<body>
+    <section>
+    <h2>Bin2Dec</h2>
+    <P>Binario para decimal</P>
+    <label>Binario:</label><input type='number' class='binario' placeholder='Digite o valor em binario aqui!'>
+    <label>Decimal:</label><input type='text' class='decimal' value=''>
+    <button class='btn-convert' onclick='Converter()'>Converter</button>
+    </section>
+    <script>
+    function Converter(){
+    var binario = document.querySelector('.binario').value;
+    var decimal = document.querySelector('.decimal');
+    // fazendo a conveção
+    /* O parseInt além de transformar em número também converte a base
+    parseInt(num,2) == decimal, parseInt(num,8) == converte em Octal
+    */
+    decimal.value = parseInt(binario,2);  
+}
+    </script>
+</body>
+</html>

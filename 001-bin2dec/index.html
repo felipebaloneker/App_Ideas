@@ -3,28 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='style.css'>
     <title>Conversor de Binario para Decimal</title>
-    <style>
-        *{margin:0;padding:0;}
-        html,body{
-            width:100%;
-            height:80%;
-            background-color: #e1e1e1;
-        }
-        section{
-            width:20%;
-            height:40%;
-            margin: 5% auto;
-            padding:5% 2%;
-            background-color: #ffff;
-            border-radius: 10%;
-        }
-        h2{text-align:center;}
-        p{text-align: center;}
-        label{font-size:1.2em;}
-        input{font-size:1.4em; margin: 2%;}
-        button{width:50%; height:20%; margin:5%;}
-    </style>
 </head>
 <body>
     <section>
@@ -34,16 +14,6 @@
     <label>Decimal:</label><input type='text' class='decimal' value=''>
     <button class='btn-convert' onclick='Converter()'>Converter</button>
     </section>
-    <script>
-    function Converter(){
-    var binario = document.querySelector('.binario').value;
-    var decimal = document.querySelector('.decimal');
-    // fazendo a conveção
-    /* O parseInt além de transformar em número também converte a base
-    parseInt(num,2) == decimal, parseInt(num,8) == converte em Octal
-    */
-    decimal.value = parseInt(binario,2);  
-}
-    </script>
+    <script type='text/javascript' src='script.js'></script>
 </body>
 </html>

@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
+/* definindo Padrões*/
+*{
+    margin:0;
+    padding:0;
+    font-size: 100%;
+    font-family: 'Rajdhani', sans-serif;
+}
+h2{font-size:2em;color:#fff;}
+p{font-size:1.2em;color:#fff;}
+.pg{
+    width:90%;
+    height:80vh;
+    background-color:#2A363B;
+    padding:5%;
+    text-align:center;
+}
+.container{
+    height:80%;
+}
+.box{  
+    width:35%;
+    height:80%;
+    background-color: #FFE545;
+    margin:2% auto;
+}
+.result{
+    width: 70%;
+    height:70%;
+    margin:10% auto;
+    border: none;
+    background-color: transparent;
+}
+.values{
+    all:unset;
+    width:2%;
+    background-color: #fff;
+
+}
+.vleft{margin-right:35%;}

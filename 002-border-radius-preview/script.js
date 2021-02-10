@@ -1,8 +1,12 @@
 var box = document.querySelector('.box');
 var input = document.querySelectorAll('.values');
 var result = document.querySelector('.result');
+var Btncopy = document.querySelector('.btncopy');
 var verI = 0;
-
+var topleft = 0;
+var topright = 0;
+var bleft = 0;
+var bright = 0;
 // Contador para cada input na lista
 for(let i = 0; i < input.length; i++){
     input[i].addEventListener('change', function(){
@@ -16,23 +20,17 @@ for(let i = 0; i < input.length; i++){
 
 // -- Mostrando codigo na tela - Troca de borda --
 function Preview(i,value){
-    if(verI == 1){ // para todas as bordas
-        box.style.borderRadius = `${value}px`;
-        result.innerHTML = `border-radius: ${value}px;\r\n`;}
-    else if(i == 0){ //  0  == bordar superior a esquerda
-        box.style.borderTopLeftRadius = `${value}px`;
-        result.innerHTML = `border-top-left-radius: ${value}px;\r\n`; // \r\n = quebra de linha
-    }
-    else if(i == 1){ // 1 == bordar superior a direita
-        box.style.borderTopRightRadius= `${value}px`;
-        result.innerHTML += `border-top-right-radius: ${value}px;\r\n`;
-    }
-    else if(i == 2){// 2 == bordar inferior a esquerda
-        box.style.borderBottomLeftRadius = `${value}px`;
-        result.innerHTML += `border-bottom-left-radius: ${value}px;\r\n`;
-    }
-    else {   // 3 == bordar inferior a direita
-        box.style.borderBottomRightRadius = `${value}px`;
-        result.innerHTML += `border-bottom-right-radius: ${value}px;\r\n`;
-    }
+    if(i == 0){topleft = value;} //  0  == bordar superior a esquerda
+    else if(i == 1){topright = value;}// 1 == bordar superior a direita
+    else if(i == 2){bleft = value;}
+    else{bright = value;}
+    box.style.borderRadius = `${topleft}% ${topright}% ${bright}% ${bleft}%`;
+    result.value = `border-radius: ${topleft}% ${topright}% ${bright}% ${bleft}%,`;
 }
+
+// -- Copiando codigo --
+function Copy(){
+    result.select();
+    document.execCommand('copy'); 
+}
+Btncopy.addEventListener('click',Copy);

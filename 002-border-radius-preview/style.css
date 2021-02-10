@@ -31,6 +31,7 @@ p{font-size:1.2em;color:#fff;}
     margin:10% auto;
     border: none;
     background-color: transparent;
+    font-size: 1.12em;
 }
 .values{
     all:unset;

@@ -25,6 +25,7 @@ p{font-size:1.2em;color:#fff;}
     margin:2% auto;
 }
 .result{
+    all:unset;
     width: 70%;
     height:70%;
     margin:10% auto;

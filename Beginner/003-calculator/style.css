@@ -42,10 +42,12 @@
     
 }
 button{
+    all:unset;
     width:28%;
     height:10%;
     margin:2%;
     border:none;
+    text-align: center;
     border-radius:10px;
     box-shadow: -5px 0px  #6d6d8c;
     background-color:#A6A7B9;

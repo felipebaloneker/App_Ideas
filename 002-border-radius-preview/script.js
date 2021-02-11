@@ -10,7 +10,7 @@ var bright = 0;
 // Contador para cada input na lista
 for(let i = 0; i < input.length; i++){
     input[i].addEventListener('change', function(){
-        if(!isNaN(input[i].value)){ // Se o input for numerico chama a função Preview
+        if(!isNaN(input[i].value)){ // Se o input for numerico chamar a função Preview
             verI++;
             Preview(i, input[i].value); 
         }

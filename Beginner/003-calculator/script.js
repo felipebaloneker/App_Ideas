@@ -1,4 +1,4 @@
-var Numbers = [];
+var Numbers = []; // salvando numeros
 var view = document.querySelector('.stresult'); // tela com resultado
 var viewCalc = document.querySelector('.strcalc'); // tela com calculo
 let Maxchar = 8; // maximo de caracteres
@@ -30,6 +30,12 @@ function Result(){
     if( Numview.length > 0){
         view.value = Action(Number(Numviewcalc),Number(Numview),saveOper);
     }
+    if(Numbers.length === 0){return;}
+    // calculando toda vez que o usuario adicionar um operador
+    viewCalc.value += `${Numview} = ${view.value}`;
+    Numbers.push(Numview);
+    console.log(Numbers);
+
 }
 function Action(num1,num2,operator){
     switch(operator){

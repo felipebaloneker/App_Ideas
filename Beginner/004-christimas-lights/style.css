@@ -19,9 +19,9 @@ body,html{
 .circle{
     display:inline-block;
     width:3%;
-    height:50%;
-    margin: 0 10px;
-    border-radius:20% 20% 50% 50%;
+    height:40%;
+    margin: 2px;
+    border-radius:50%;
     background-color: rgba(0,0,0,0.3);
     animation:1s all ease;
 }
@@ -76,7 +76,19 @@ body,html{
     background-color: #C0392B;
 
 }
-/* Animação da luzes*/
+/* Mobile First*/
+/* Tablets e Laptops*/
+@media screen and (min-width: 769px){
+    .lights{
+        width:50%;
+        margin:auto;
+    }
+    .bts{
+        width:50%;
+    }
+}
+
+/* Animação das luzes*/
 @keyframes redglow{
     0%,
     100%{

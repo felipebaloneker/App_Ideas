@@ -12,13 +12,13 @@ function AddNumber(num){
     }
 }
 
-// Coletando e Mostrando Números e Operadores
+// Mostrando Números e Operadores
 function Calculate(operator){
+    saveOper = operator;
     var number = view.value;
     if(number.length === 0){return}
     Numbers.push(number);
     viewCalc.value = `${number}${operator}`;
-    saveOper = operator;
     view.value = null;
 }
 
@@ -30,13 +30,13 @@ function Result(){
         view.value = Action(Number(Numviewcalc),Number(Numview),saveOper);
     }
     if(Numbers.length === 0){return;}
-    // calculando toda vez que o usuario adicionar um operador
+
     viewCalc.value += `${Numview} = ${view.value}`;
     Numbers.push(Numview);
-    console.log(Numbers)
     console.log(Numbers);
 
 }
+
 function Action(num1,num2,operator){
     switch(operator){
         case '+': return num1 + num2;
@@ -48,21 +48,21 @@ function Action(num1,num2,operator){
 
 // Calcular Porcentagem
 function Persent(){
-    var num = Number(view.value);
-    view.value = num/100;
+    var number = Number(view.value);
+    view.value = number/100;
 }
 // Adicinando Ponto flutuante
 function Addpoint(){
-    var Num = view.value;
-    if(!Num.includes('.')){
+    var number = view.value;
+    if(!number.includes('.')){
         view.value += '.';
     }
 }
 // Tornando Positivo ou Negativo
 function Plus(){
-    var Num = Number(view.value);
-    Num *= -1;
-    view.value = Num.toString();
+    var number = Number(view.value);
+    number *= -1;
+    view.value = number.toString();
 }
 // Limpado Total
 function Clear(){

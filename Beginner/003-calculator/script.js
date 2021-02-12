@@ -72,4 +72,5 @@ function Clear(){
 function ClearAll(){
     view.value = null;
     viewCalc.value = null;
+    Numbers = [];
 }

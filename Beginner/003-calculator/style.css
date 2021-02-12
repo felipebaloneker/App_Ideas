@@ -5,6 +5,10 @@
     font-size:100%;
     font-family: 'Teko', sans-serif;
 }
+body,html{
+    width:100%;
+    height:100%;
+}
 /**/
 .app{
     width:92%;
@@ -80,4 +84,16 @@ button{
 .btOpes button{
     width:100%;
     margin-bottom:13%;
+}
+/* mobile first*/
+/* Medium Devices - Tablets Desktop*/
+@media screen and (min-width: 768px){
+    .app{height:84.4%;}
+    .calc{width:25%;
+        height:65%;
+        padding:2%;
+    }
+    .btOpes{
+        margin-top:-15%;
+    }
 }

@@ -18,14 +18,13 @@ function Calculate(operator){
     if(number.length === 0){return}
     Numbers.push(number);
     viewCalc.value = `${number}${operator}`;
-    Numbers.push(operator);
     saveOper = operator;
     view.value = null;
 }
 
 // Calculando
 function Result(){
-    Numviewcalc = Numbers[Numbers.length -1, 0];
+    Numviewcalc = Numbers[Numbers.length -1];
     Numview = view.value;
     if( Numview.length > 0){
         view.value = Action(Number(Numviewcalc),Number(Numview),saveOper);
@@ -34,6 +33,7 @@ function Result(){
     // calculando toda vez que o usuario adicionar um operador
     viewCalc.value += `${Numview} = ${view.value}`;
     Numbers.push(Numview);
+    console.log(Numbers)
     console.log(Numbers);
 
 }

@@ -1,29 +1,69 @@
-var btns = document.querySelectorAll('.btnum'); // Lista de botões numericos
-var view = document.querySelector('.result'); // tela de amostra
-var num1 = 0;
-var num2 = 0;
-// Pegando Valores numericos
-for(let i = 0; i < btns.length;i++){
-    var btn = btns[i];
-    btn.addEventListener('click',Mostrar);
+var Numbers = [];
+var view = document.querySelector('.stresult'); // tela com resultado
+var viewCalc = document.querySelector('.strcalc'); // tela com calculo
+let Maxchar = 8; // maximo de caracteres
+let saveOper ; // salvando operador
+var btClearAll = document.querySelector('.btclearAll');
+
+// Adicionando Número
+function AddNumber(num){
+    if(view.value.length < Maxchar){
+        view.value += num;
+    }
 }
 
-// Mostrando na tela
-function Mostrar(){
-    view.value = this.value;
+// Coletando e Mostrando Números e Operadores
+function Calculate(operator){
+    var number = view.value;
+    if(number.length === 0){return}
+    Numbers.push(number);
+    viewCalc.value = `${number}${operator}`;
+    Numbers.push(operator);
+    saveOper = operator;
+    view.value = null;
 }
-// Guardando valores
-function Save(){
-    if(num1 = 0){
-        num1 = this.value;
+
+// Calculando
+function Result(){
+    Numviewcalc = Numbers[Numbers.length -1, 0];
+    Numview = view.value;
+    if( Numview.length > 0){
+        view.value = Action(Number(Numviewcalc),Number(Numview),saveOper);
     }
-    else{
-        num2 = this.value;
+}
+function Action(num1,num2,operator){
+    switch(operator){
+        case '+': return num1 + num2;
+        case '-': return num1 - num2;
+        case 'x': return num1 * num2;
+        case '/': return num1 / num2;
     }
 }
-// Somando
-function Soma(){
-    soma = num1 + num2;
-    console.log(soma);
+
+// Calcular Porcentagem
+function Persent(){
+    var num = Number(view.value);
+    view.value = num/100;
 }
-document.querySelector('.btsom').addEventListener('click',Soma)
+// Adicinando Ponto flutuante
+function Addpoint(){
+    var Num = view.value;
+    if(!Num.includes('.')){
+        view.value += '.';
+    }
+}
+// Tornando Positivo ou Negativo
+function Plus(){
+    var Num = Number(view.value);
+    Num *= -1;
+    view.value = Num.toString();
+}
+// Limpado Total
+function Clear(){
+    view.value = null;
+}
+// Limpando Tudo
+function ClearAll(){
+    view.value = null;
+    viewCalc.value = null;
+}

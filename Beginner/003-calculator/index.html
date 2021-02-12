@@ -10,33 +10,37 @@
 <body>
     <section class='app'>
         <div class='calc'>
-            <input type='text' class='result' placeholder='888888'readonly>
+            <div class='result'>
+                <input type='text' class='strcalc' placeholder='88888888'readonly>
+                <input type='text' class='stresult' placeholder='88888888'readonly>
+            </div>
             <div class='buttons'>
                 <div class='btMenus'>
-                    <button class='btmenu'>C</button>
-                    <button class='btmenu'>+/-</button>
-                    <button class='btmenu'>%</button>
+                    <button class='btClear' onclick='Clear()'>C</button>
+                    <button class='bt' onclick='Plus()'>+/-</button>
+                    <button class='btmenu' onclick='Persent()'>%</button>
                 </div>
                 <div class='btNums' >
-                    <button class='btnum' value='9'>9</button>
-                    <button class='btnum' value='8'>8</button>
-                    <button class='btnum' value='7'>7</button><br>
-                    <button class='btnum' value='6'>6</button>
-                    <button class='btnum' value='5'>5</button>
-                    <button class='btnum' value='4'>4</button><br>
-                    <button class='btnum' value='3'>3</button>
-                    <button class='btnum' value='2'>2</button>
-                    <button class='btnum' value='1'>1</button><br>
-                    <button class='btnum' value='0'>0</button>
-                    <button class='btnum' value='.'>.</button>
+                    <button class='btnum' onclick='AddNumber(9)'>9</button>
+                    <button class='btnum' onclick='AddNumber(8)'>8</button>
+                    <button class='btnum' onclick='AddNumber(7)'>7</button><br>
+                    <button class='btnum' onclick='AddNumber(6)'>6</button>
+                    <button class='btnum' onclick='AddNumber(5)'>5</button>
+                    <button class='btnum' onclick='AddNumber(4)'>4</button><br>
+                    <button class='btnum' onclick='AddNumber(3)'>3</button>
+                    <button class='btnum' onclick='AddNumber(2)'>2</button>
+                    <button class='btnum' onclick='AddNumber(1)'>1</button><br>
+                    <button class='btnum' onclick='AddNumber(0)'>0</button>
+                    <button class='btnum' onclick='Addpoint()'>.</button>
+                    <button class= 'btclearAll' onclick='ClearAll()'>AC</button>
                     
                 </div>
                 <div class='btOpes'>
-                    <button class='btdiv'>/</button><br>
-                    <button class='btmult'>X</button><br>
-                    <button class='btsub'>-</button><br>
-                    <button class='btsom'>+</button><br>
-                    <button class='btres'>=</button><br>
+                    <button class='btdiv' onclick='Calculate("/")'>/</button><br>
+                    <button class='btmult' onclick='Calculate("x")'>X</button><br>
+                    <button class='btsub' onclick='Calculate("-")'>-</button><br>
+                    <button class='btsom' onclick='Calculate("+")'>+</button><br>
+                    <button class='btresult' onclick='Result()'>=</button><br>
                 </div>
             </div>
         </div>

@@ -1,0 +1,4 @@
+*{margin:0;padding:0;}
+.background{width:96%;height:91vh;padding:2%;background-color: rgba(255, 255, 255, 0);animation:10s infinite;}
+.items{width:20%;height:5%;padding:2%;margin:auto;background-color: #fff;border-radius: 50px;}
+.color{all:unset;width:10%;text-align: center;}

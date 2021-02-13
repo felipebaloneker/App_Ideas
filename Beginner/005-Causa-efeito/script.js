@@ -22,6 +22,6 @@ for(i = 0; i < people.length; i++){
 function View(v){
     result.innerHTML = '';
     for(let [key,value] of Object.entries(people[v])){
-        result.innerHTML += `${key}: ${value}<br>`;
+        result.innerHTML += `<p>${key}: ${value}</p><br>`;
     }
 }

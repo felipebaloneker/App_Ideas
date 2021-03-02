@@ -4,9 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel='stylesheet' href='style.css'>
+    <title>CountDownTImer</title>
 </head>
 <body>
-    
+    <div class='container'>
+        <div class='clock'>
+            <p class='clock-count'>0</p>
+            <p class='clock-label'>Day</p>
+        </div>
+        <div class='clock'>
+            <p class='clock-count'>0</p>
+            <p class='clock-label'>Hours</p>
+        </div>
+        <div class='clock'>
+            <p class='clock-count'>0</p>
+            <p class='clock-label'>Minutes</p>
+        </div>
+        <div class='clock'>
+            <p class='clock-count'>0</p>
+            <p class='clock-label'>Seconds</p>
+        </div>
+    </div>
+    <div class='input'>
+        <input type='date' class='input-time'onchange='Calc(this.value)'>
+    </div>
 </body>
 </html>

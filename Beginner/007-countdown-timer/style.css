@@ -1,0 +1,25 @@
+*{
+    font-family: Arial,sans-serif;
+    margin:0;
+    padding:0;
+}
+body{
+    background-color: rgb(55, 137, 175);
+}
+p{font-size:5em;}
+.container{
+    width: 70%;
+    margin:10% auto;
+}
+.clock{
+    margin-right:5%;
+    float:left;
+    text-align: center;
+    color:white;
+}
+.clock-label{
+    font-size:1em;
+}
+.input-time{
+    margin:10% 30%;
+}

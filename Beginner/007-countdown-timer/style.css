@@ -4,22 +4,53 @@
     padding:0;
 }
 body{
-    background-color: rgb(55, 137, 175);
+
+    background-color: #343838;
 }
-p{font-size:5em;}
+p{font-size:4em;}
+.event-name{
+    margin-top:30%;
+    font-size:2.5em;
+    font-weight: 700;
+    text-align: center;
+}
 .container{
-    width: 70%;
-    margin:10% auto;
+    width: 90%;
+    margin: auto;
 }
 .clock{
-    margin-right:5%;
+    width:20%;
+    margin:10% auto;
+    margin-right:4%;
     float:left;
     text-align: center;
     color:white;
 }
+.clock:last-child{
+    margin-right: 0;
+}
 .clock-label{
     font-size:1em;
 }
-.input-time{
-    margin:10% 30%;
+.input-name{
+    all:unset;
+    margin-left:28%;
+    width:40%;
+    padding:2%;
+    text-align:center;
+    background-color: #26ADE4;
+    border-radius:26px;
+}
+.input-timer{
+    all:unset;
+    width:40%;
+    margin:5% 28%;
+    margin-bottom: 2%;
+    text-align: center;
+    padding:2%;
+    background-color: #26ADE4;
+    color:white;
+    border-radius:25px;
+
+
 }

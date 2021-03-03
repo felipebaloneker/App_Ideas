@@ -5,29 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href='style.css'>
-    <title>CountDownTImer</title>
+    <title>CountDownTimer</title>
 </head>
 <body>
+    <div class='event-name'>COUNTDOWN</div>
     <div class='container'>
         <div class='clock'>
-            <p class='clock-count'>0</p>
+            <p class='Day clock-count'>0</p>
             <p class='clock-label'>Day</p>
         </div>
         <div class='clock'>
-            <p class='clock-count'>0</p>
+            <p class='Hours clock-count'>0</p>
             <p class='clock-label'>Hours</p>
         </div>
         <div class='clock'>
-            <p class='clock-count'>0</p>
+            <p class='Minutes clock-count'>0</p>
             <p class='clock-label'>Minutes</p>
         </div>
         <div class='clock'>
-            <p class='clock-count'>0</p>
+            <p class='Seconds clock-count'>0</p>
             <p class='clock-label'>Seconds</p>
         </div>
     </div>
+    
     <div class='input'>
-        <input type='date' class='input-time'onchange='Calc(this.value)'>
+        <input type='date' class='input-timer' onchange='Calc(this.value)'>
+        <input type='text' class='input-name' placeholder='Event Name' onchange='Eventname(this.value)'>
     </div>
+<script type='text/javascript' src='script.js'></script>
 </body>
 </html>
